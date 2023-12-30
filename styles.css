@@ -5,6 +5,8 @@
             font-size: 16px;
             font-weight: 400;
             line-height: 1.5;
+            width: 100%;
+            margin: 0%;
         }
 
         main {
@@ -19,6 +21,7 @@
         }
 
         h1 {
+            width: 80%;
             font-size: 48px;
             font-weight: 600;
             line-height: 1.5;
@@ -36,17 +39,37 @@
             text-align: center;
             align-items: center;
         }
-            
-        p1{
+
+        p1 {
             display: grid;
             text-align: center;
             align-items: center;
             grid-template-columns: 1fr;
         }
 
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            background-color: #f5f5f5;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #cfd8dc;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #90a4ae;
+        }
+
         footer {
+            background-color: #c9edff;
+        }
+
+        footer p{
+            background-color: #c9edff;
             display: flex;
-            text-align: center;
+            justify-content: center;
             align-items: center;
         }
 
@@ -73,7 +96,7 @@
             align-items: flex-end;
             position: absolute;
             right: 0;
-            bottom: -8px;
+            bottom: 0;
         }
 
         #sobre-nosotros {
@@ -135,11 +158,21 @@
     }
 
     .contact-info{
-        display: grid;
+        display: inline-grid;
         grid-template-columns: 1fr 1fr 1fr;
         margin: 0;
-        width: 80%;
+        width: 60%;
         height: 50%;
+    }
+
+    .map-icon, .social-icon, .telephone-icon{
+        align-self: flex-start;
+        justify-self: flex-start;
+    }
+
+    .contact-info div{
+        font-size: normal;
+        transition: font-size 0.3s;
     }
 
     .contact-info div:hover{
@@ -182,7 +215,7 @@
 
     .navbar li a:hover {
         font-weight: bold;
-        color: #333;
+        color: #4a4a4a;
     }
 
     .logo {
@@ -201,7 +234,6 @@
         display: grid;
         justify-content: space-around;
         align-items: center;
-        overflow-y: hidden;
         white-space: wrap;
     }
 
@@ -224,41 +256,49 @@
     }
     
     .whatsapp-icon img {
-        width: 60px;
-        height: 60px;
+        width: 55px;
+        height: 55px;
         transition: width 0.3s, height 0.3s;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         border-radius: 50%;
     }
 
     .whatsapp-icon img:hover {
-        width: 65px;
-        height: 65px;
+        width: 60px;
+        height: 60px;
     }
     
 /*Instagram icon*/
 .instagram-icon {
     position: fixed;
     right: 40px;
-    bottom: 100px;
+    bottom: 90px;
     z-index: 1000;
 }
 
 .instagram-icon img {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     transition: width 0.3s, height 0.3s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 50%;
 }
 
 .instagram-icon img:hover {
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
+}
+
+* {
+    box-sizing: border-box; /* Add this to ensure consistent box-sizing */
 }
     /* Responsive */
 
         @media (max-width: 768px) {
+            main{
+                padding-top: 150px;
+            }
+
             h1 {
                 font-size: 36px;
             }
@@ -277,6 +317,23 @@
                 width: 100%;
                 margin: auto;
                 padding-bottom: 50px;
+            }
+
+            section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+            }
+
+            .inicio-img {
+                display: flex;
+                width: auto;
+                align-items: flex-end;
+                position: static;
+                right: 0;
+                bottom: -8px;
             }
 
             .contact-info{
@@ -300,7 +357,7 @@
                 padding: 40px;
                 padding-left: 0;
                 z-index: 100;
-                position: absolute;
+                position: fixed;
             }
 
             .navbar li {
@@ -334,13 +391,23 @@
                 margin: auto;
             }
 
-            .productos{
-                display: grid;
+            #productos{
                 grid-template-columns: 1fr;
-                justify-content: center;
-                align-content: center;
-                padding: 0;
-                margin: 0;
+            }
+
+            #productos .collage{
+                text-align: center;
+            }
+
+            #productos div{
+                padding: 20px;
+            }
+
+            #productos p, #productos h1{
                 width: 100%;
+            }
+
+            .collage{
+                justify-content: center;
             }
         }
