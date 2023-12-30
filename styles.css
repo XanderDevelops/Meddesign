@@ -195,6 +195,27 @@
         margin-left: 40px;
     }
 
+    /* Cool collage */
+
+    .collage {
+        display: grid;
+        justify-content: space-around;
+        align-items: center;
+        overflow-y: hidden;
+        white-space: wrap;
+    }
+
+    .row{
+        padding: 0 !important;
+    }
+
+    #productos img {
+        width: 40%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+/*Whatsapp icon*/
     .whatsapp-icon {
         position: fixed;
         right: 40px;
@@ -214,8 +235,28 @@
         width: 65px;
         height: 65px;
     }
+    
+/*Instagram icon*/
+.instagram-icon {
+    position: fixed;
+    right: 40px;
+    bottom: 100px;
+    z-index: 1000;
+}
 
-    /* Carousel */
+.instagram-icon img {
+    width: 60px;
+    height: 60px;
+    transition: width 0.3s, height 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.instagram-icon img:hover {
+    width: 65px;
+    height: 65px;
+}
+    /* Responsive */
 
         @media (max-width: 768px) {
             h1 {
