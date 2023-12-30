@@ -1,0 +1,305 @@
+
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Poppins';
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            color: #212529;
+            text-align: left;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 1.5;
+            margin: 0 0 20px;
+        }
+
+        p {
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+            
+        p1{
+            display: grid;
+            text-align: center;
+            align-items: center;
+            grid-template-columns: 1fr;
+        }
+
+        footer {
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+
+        /* Sections */
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #inicio {
+            background-color: #fff;
+        }
+
+        #inicio h1{
+            text-align: center;
+        }
+
+        .inicio-img {
+            display: flex;
+            width: 256px;
+            align-items: flex-end;
+            position: absolute;
+            right: 0;
+            bottom: -8px;
+        }
+
+        #sobre-nosotros {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: #28a2d9;
+            color: #fff;
+            text-align: left;
+        }
+
+        #sobre-nosotros div {
+            padding-left: 90px;
+        }
+
+        #sobre-nosotros p {
+            text-align: left;
+            width: 90%;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .sobre-nosotros-img {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            width: 512px;
+        }
+
+        #productos {
+            background-color: #fff;
+            color: #c09808;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            text-align: right;
+            justify-content: flex-end;
+        }
+
+        #productos div {
+            padding: 90px;
+        }
+
+        #productos p {
+            text-align: right;
+        }
+
+    #contacto {
+        background-color: #28a2d9;  
+        color: #fff;
+    }
+
+    .contact-info{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0;
+        width: 80%;
+        height: 50%;
+    }
+
+    .contact-info div:hover{
+        font-size: larger;
+        transition: font-size 0.3s;
+    }
+
+    .contact-info a{
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    /* Navbar styles */
+
+    .navbar {
+        list-style-type: none;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: -20px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        z-index: 100;
+    }
+
+    .navbar li {
+        float: right;
+        padding-right: 80px;
+    }
+
+    .navbar li a {
+        color: #7a7a7a;
+        text-align: center;
+        text-decoration: none;
+        transition: font-weight 0.3s, color 0.3s;
+    }
+
+    .navbar li a:hover {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .logo {
+        display: flex;
+        align-items: flex-start;
+        font-size: 36px;
+        text-decoration: none;
+        width: 250px;
+        margin-right: auto;
+        margin-left: 40px;
+    }
+
+    .whatsapp-icon {
+        position: fixed;
+        right: 40px;
+        bottom: 20px;
+        z-index: 1000;
+    }
+    
+    .whatsapp-icon img {
+        width: 60px;
+        height: 60px;
+        transition: width 0.3s, height 0.3s;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+    }
+
+    .whatsapp-icon img:hover {
+        width: 65px;
+        height: 65px;
+    }
+
+    /* Carousel */
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                width: 80%;
+            }
+            
+            p1 {
+                display: grid;
+                grid-template-columns: 1fr;
+                width: 100%;
+                margin: auto;
+                padding-bottom: 50px;
+            }
+
+            .contact-info{
+                padding: 0%;
+                margin: auto;
+                grid-template-columns: 1fr;
+            }
+
+            #contacto div{
+                padding: auto;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            .navbar {
+                justify-content: center;
+                align-content: center;
+                padding: 40px;
+                padding-left: 0;
+                z-index: 100;
+                position: absolute;
+            }
+
+            .navbar li {
+                display: none;
+            }
+    
+            .navbar li a {
+                display: none;
+                text-align: right;
+            }
+
+            .logo{
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                width: 250px;
+            }
+
+            #sobre-nosotros {
+                grid-template-columns: 1fr;
+            }
+
+            #sobre-nosotros div {
+                padding: 20px;
+            }
+
+            .sobre-nosotros-img, .inicio-img{
+                width: 50%;
+                align-content: center;
+                padding: auto;
+                margin: auto;
+            }
+
+            .productos{
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-content: center;
+                align-content: center;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+            }
+        }
